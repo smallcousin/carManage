@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.mainController">
+   <children>
+      <SplitPane fx:id="splitPane" dividerPositions="0.2391304347826087" orientation="VERTICAL" prefHeight="671.0" prefWidth="969.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Text layoutX="278.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="共享汽车管理系统">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.18480725623582767" prefHeight="503.0" prefWidth="998.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="473.0" prefWidth="230.0">
+                           <children>
+                              <TabPane layoutX="-7.0" prefHeight="501.0" prefWidth="250.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <tabs>
+                                  <Tab fx:id="tab_car" text="汽车">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox alignment="CENTER" prefHeight="518.0" prefWidth="297.0" spacing="27.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-15.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#addCar" prefHeight="40.0" prefWidth="115.0" text="公司买入新车" />
+                                                      <Button mnemonicParsing="false" onAction="#carDelete" prefHeight="40.0" prefWidth="115.0" text="汽车回收" />
+                                                   </children>
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                  <Tab fx:id="tab_user" text="用户">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox alignment="CENTER" prefHeight="462.0" prefWidth="250.0" spacing="27.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#userBorrowCar" prefHeight="40.0" prefWidth="115.0" text="用户租车" />
+                                                      <Button mnemonicParsing="false" onAction="#userReturnCar" prefHeight="40.0" prefWidth="115.0" text="用户还车" />
+                                                      <Button mnemonicParsing="false" onAction="#addUser" prefHeight="40.0" prefWidth="115.0" text="新用户加入" />
+                                                      <Button mnemonicParsing="false" onAction="#deleteCourse" prefHeight="40.0" prefWidth="115.0" text="删除用户" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                    <Tab fx:id="tab_log" text="记录">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox alignment="CENTER" prefHeight="462.0" prefWidth="250.0" spacing="27.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="这里是是所有租借车的记录" wrappingWidth="144.0" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                </tabs>
+                              </TabPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="473.0" prefWidth="711.0">
+                           <children>
+                              <StackPane prefHeight="556.0" prefWidth="886.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <TableView fx:id="carTableView" editable="true" prefHeight="501.0" prefWidth="50.0">
+                                      <columns>
+                                        <TableColumn fx:id="CcarIDT" prefWidth="170.0" resizable="false" text="汽车编号" />
+                                          <TableColumn fx:id="CcarBrandT" prefWidth="178.0" resizable="false" text="品牌" />
+                                        <TableColumn fx:id="CnowUser" minWidth="4.0" prefWidth="185.0" resizable="false" text="当前用户" />
+                                          <TableColumn fx:id="CnowUserID" minWidth="0.0" prefWidth="193.0" resizable="false" text="用户ID" />
+                                      </columns>
+                                    </TableView>
+                                    <TableView fx:id="userTableView" editable="true" prefHeight="501.0" prefWidth="738.0" visible="false">
+                                      <columns>
+                                        <TableColumn fx:id="UuserIDT" prefWidth="222.0" resizable="false" text="用户ID" />
+                                        <TableColumn fx:id="UuserNT" prefWidth="143.0" resizable="false" text="用户名" />
+                                          <TableColumn fx:id="UubCarID" minWidth="3.0" prefWidth="178.0" resizable="false" text="租借车的编号" />
+                                          <TableColumn fx:id="UubCarB" prefWidth="183.0" resizable="false" text="汽车品牌" />
+                                      </columns>
+                                    </TableView>
+                                    <TableView fx:id="logTableView" editable="true" prefHeight="556.0" prefWidth="835.0" visible="false">
+                                       <columns>
+                                          <TableColumn fx:id="LcarID" prefWidth="86.5" resizable="false" text="汽车编号" />
+                                          <TableColumn fx:id="LcarB" prefWidth="131.0" resizable="false" text="汽车品牌" />
+                                          <TableColumn fx:id="LuserN" prefWidth="128.5" resizable="false" text="用户名" />
+                                          <TableColumn fx:id="LuserID" prefWidth="81.5" resizable="false" text="用户ID" />
+                                          <TableColumn fx:id="LuserBT" prefWidth="150.0" resizable="false" text="租借时间" />
+                                          <TableColumn fx:id="LuserRT" prefWidth="147.5" resizable="false" text="归还时间" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
